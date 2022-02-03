@@ -120,6 +120,7 @@ main h2 {
   font-size: 2rem;
   margin-top: 15vh;
   margin-bottom: 1.5rem;
+  max-width: 70vw;
 }
 
 main p {
@@ -135,6 +136,8 @@ main p {
 
 .snippets-section img {
   margin-left: -2vw;
+  max-width: 1500px;
+  max-height: 500px;
 }
 
 .snippets-section .snippets-section-text {
@@ -158,6 +161,17 @@ main p {
 main .devices-image {
   margin-top: 5rem;
   margin-bottom: -4rem;
+  max-width: 80vw;
+}
+
+.company-logos {
+  display: flex;
+  align-items: center;
+}
+
+.company-logo {
+  margin: 5rem 3rem;
+  margin-bottom: 0;
 }
 
 main ul {
@@ -263,4 +277,85 @@ footer .social-media {
 .social-media img:hover {
   transform: rotate(360deg) scale(130%);
   transition: 0.1s linear;
+}
+
+@media screen and (max-width: 1150px) {
+  .company-logos {
+    transform: scale(70%);
+  }
+
+  main ul {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .snippets-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header p {
+    max-width: 80%;
+    margin: 3rem auto;
+    margin-bottom: 0;
+  }
+
+  .snippets-section img {
+    all: unset;
+    max-width: 80vw;
+    height: auto;
+  }
+
+  .snippets-section .snippets-section-text {
+    text-align: center;
+    margin: 0;
+    align-items: center;
+  }
+
+  .snippets-section-text p {
+    width: 60%;
+  }
+
+  .company-logos {
+    flex-direction: column;
+    margin-bottom: -5rem;
+  }
+
+  .company-logo {
+    transform: scale(120%);
+    margin: 4rem auto;
+  }
+
+  .bottom-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .header-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  button {
+    width: 70vw;
+  }
+
+  .download-mac {
+    margin-left: 0;
+    margin-top: 1rem;
+  }
+
+  .footer-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-content a {
+    margin: 1rem 0;
+  }
 }
